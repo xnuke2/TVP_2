@@ -23,6 +23,10 @@ bool rz(char* arr, int size, string* r, int s) {
 	return 0;
 }
 bool repeata(char* arr, int size, string* r, int s) {
+	if (arr[size] >= 3) {
+		cout << "Не принадлежит";
+		return 0;
+	}
 	switch (arr[size])
 	{
 	case '1':
@@ -34,15 +38,16 @@ bool repeata(char* arr, int size, string* r, int s) {
 		size++;
 		if (repeata(arr, size, r, s))return 1;
 	}
-	if (arr[size] >= 3) {
-		cout << "Не принадлежит";
-	}
 	if (size > s) {
 		cout << "Ошибка, длина не совпадает";
 	}
 	return 0;
 }
 bool repeatb(char* arr, int size, string* r, int s) {
+	if (arr[size] >= 3) {
+		cout << "Не принадлежит";
+		return 0;
+	}
 	switch (arr[size])
 	{
 	case '2':
@@ -54,12 +59,17 @@ bool repeatb(char* arr, int size, string* r, int s) {
 		size++;
 		if (repeatc(arr, size, r, s))return 1;
 	}
+
 	if (size > s) {
 		cout << "Ошибка, длина не совпадает";
 	}
 	return 0;
 }
 bool repeatc(char* arr, int size, string* r, int s) {
+	if (arr[size] == 2) {
+		cout << "Не принадлежит";
+		return 0;
+	}
 	switch (arr[size])
 	{
 	case '1':
