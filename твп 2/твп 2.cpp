@@ -36,4 +36,5 @@ void main()
 		i++;
 		if (repeatb(a, i, res, s)) cout << *res + " - Принадлежит автомату" << endl; else cout << *res + " - Не принадлежит автомату" << endl;
 	}
+
 }
