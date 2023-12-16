@@ -7,9 +7,8 @@ using namespace std;
 bool repeata(char* arr, int size, string* r, int s);
 bool repeatb(char* arr, int size, string* r, int s);
 bool repeatc(char* arr, int size, string* r, int s);
-bool rz(char* arr, int size, string* r, int s) {
+bool repeatz(char* arr, int size, string* r, int s) {
 	if (size == s) {
-
 		return 1;
 	}
 	switch (arr[size]) {
@@ -23,7 +22,7 @@ bool rz(char* arr, int size, string* r, int s) {
 	return 0;
 }
 bool repeata(char* arr, int size, string* r, int s) {
-	if (arr[size] >= 3) {
+	if ((int)arr[size] >= 3) {
 		cout << "Не принадлежит";
 		return 0;
 	}
@@ -32,7 +31,7 @@ bool repeata(char* arr, int size, string* r, int s) {
 	case '1':
 		*r += "Z";
 		size++;
-		if (rz(arr, size, r, s))return 1;
+		if (repeatz(arr, size, r, s))return 1;
 	case '2':
 		*r += "A";
 		size++;
@@ -53,7 +52,7 @@ bool repeatb(char* arr, int size, string* r, int s) {
 	case '2':
 		*r += "Z";
 		size++;
-		if (rz(arr, size, r, s))return 1;
+		if (repeatz(arr, size, r, s))return 1;
 	case '1':
 		*r += "B";
 		size++;
@@ -75,7 +74,7 @@ bool repeatc(char* arr, int size, string* r, int s) {
 	case '1':
 		*r += "Z";
 		size++;
-		if (rz(arr, size, r, s))return 1;
+		if (repeatz(arr, size, r, s))return 1;
 	case '3':
 		*r += "C";
 		size++;

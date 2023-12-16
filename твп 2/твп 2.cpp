@@ -3,7 +3,7 @@
 void main()
 {
 	setlocale(LC_ALL, "Russian");
-	cout << "Введите строку для проверки:";
+	cout << "Введите строку для проверки:" << endl;
 	string alg;
 	getline(cin, alg);
 	if (alg == "") {
@@ -36,4 +36,5 @@ void main()
 		i++;
 		if (repeatb(a, i, res, s)) cout << *res + " - Принадлежит автомату" << endl; else cout << *res + " - Не принадлежит автомату" << endl;
 	}
+
 }
